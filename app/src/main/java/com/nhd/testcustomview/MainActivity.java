@@ -12,12 +12,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        PieView pieView = (PieView) findViewById(R.id.myView);
-        List<PieBean> mDatas = new ArrayList<>();
-        mDatas.add(new PieBean(80));
-        mDatas.add(new PieBean(230));
-        mDatas.add(new PieBean(170));
-        mDatas.add(new PieBean(140));
-        pieView.setData(mDatas);
+
     }
 }

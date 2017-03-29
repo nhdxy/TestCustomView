@@ -52,6 +52,7 @@ public class PieView extends View {
         if (null == mDatas) {
             return;
         }
+        //将坐标原点位移到控件的正中间
         canvas.translate(width / 2, height / 2);
         for (PieBean pieBean : mDatas) {
             paint.setColor(pieBean.color);
