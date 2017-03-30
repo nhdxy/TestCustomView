@@ -4,12 +4,12 @@ package com.nhd.testcustomview;
  * Created by nhd on 2017/3/29.
  */
 
-public class PieBean {
-    public int value;
-    public float angle;
-    public int color;
+class PieBean {
+    int value;
+    float angle;
+    int color;
 
-    public PieBean(int value) {
+    PieBean(int value) {
         this.value = value;
     }
 }

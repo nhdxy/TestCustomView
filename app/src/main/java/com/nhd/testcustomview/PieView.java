@@ -5,7 +5,6 @@ import android.graphics.Canvas;
 import android.graphics.Paint;
 import android.graphics.RectF;
 import android.support.annotation.Nullable;
-import android.support.v4.content.ContextCompat;
 import android.util.AttributeSet;
 import android.view.View;
 
@@ -24,7 +23,6 @@ public class PieView extends View {
     private int width, height;
     private RectF rectF;
     private List<PieBean> mDatas;
-    private int startAngle = 0;
 
     public PieView(Context context) {
         this(context, null);
@@ -56,8 +54,8 @@ public class PieView extends View {
         canvas.translate(width / 2, height / 2);
         for (PieBean pieBean : mDatas) {
             paint.setColor(pieBean.color);
-            canvas.drawArc(rectF, startAngle, pieBean.angle, true, paint);
-            startAngle += pieBean.angle;
+            canvas.drawArc(rectF, 0, pieBean.angle, true, paint);
+            canvas.rotate(pieBean.angle);
         }
     }
 
